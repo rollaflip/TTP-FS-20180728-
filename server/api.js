@@ -7,4 +7,8 @@ api
   .use('/users', users)
   .use('/shares', shares)
 // No routes matched? 404.
-api.use((req, res) => res.status(404).end())
+api.use((req, res, next) => {
+  const err = new Error("API route not found!");
+  err.status = 404;
+  next(err);
+})
