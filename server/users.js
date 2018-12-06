@@ -1,6 +1,6 @@
 const db = require('../db') //this is required
-const Product = require('../db/models/product');
-const Review = require('../db/models/review');
+const Product = require('../db/models/user');
+const Review = require('../db/models/share');
 
 const router = require('express').Router()
 

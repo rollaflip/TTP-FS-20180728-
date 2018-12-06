@@ -1,9 +1,7 @@
-'use strict';
+const User = require('./user')
+const Share = require('./share');
 
-const Product = require('./product')
-const Review = require('./review');
+User.hasMany(Share);
+Share.belongsTo(User);
 
-Product.hasMany(Review);
-Review.belongsTo(Product);
-
-module.exports = {Product, Review};
+module.exports = {User, Share};
