@@ -1,10 +1,8 @@
-'use strict'
-
 const Sequelize = require('sequelize')
 const db = require('../index.js');
 const User = require('../models')
 
-const Shares = db.define("shares", {
+const Shares = db.define("share", {
   ticker: {
     type: Sequelize.STRING
   },
