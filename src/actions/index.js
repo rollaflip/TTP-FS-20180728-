@@ -43,7 +43,7 @@ export const DB_TEST = "DB_TEST"
 export const dbTest = () => {
     return dispatch => {
         dispatch(dbTestStart());
-        axios.get(`/api/products`)
+        axios.get(`/api/share`)
             .then(res => dispatch(dbTestResults(JSON.stringify(res.data))))
             .catch(err => dispatch(dbTestError(err)))
 
